@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="about"
-      className="w-full flex items-center relative overflow-hidden bg-page-bg text-main-text transition-colors duration-300 font-sans pt-32 pb-20 md:pt-40 md:pb-32"
+      className="w-full h-screen sm:h-auto flex items-center relative overflow-hidden bg-page-bg text-main-text transition-colors duration-300 font-sans pt-32 pb-20 md:pt-40 md:pb-32"
     >
       {/* Subtle background gradient */}
       <div className="absolute inset-0 opacity-50 bg-gradient-to-br from-page-bg via-transparent to-surface transition-colors duration-300" />
