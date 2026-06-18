@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* custom variant so Tailwind knows how to process your light mode toggle */
+@custom-variant light (&:where(.light, .light *));
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  @apply bg-page-bg text-main-text transition-colors duration-300 selection:bg-accent selection:text-white;
+}
+
+/* DARK MODE  */
+@theme {
+  /* Page & Surfaces */
+  --color-page-bg: #050505;
+  --color-surface: #0a0a0a;
+  --color-border: #1a1a1a;
+  --color-muted: #9197a3;
+
+  /* Text */
+  --color-main-text: #ffffff;
+
+  /* Accent / Emerald Green Palette */
+  --color-accent: #10b981;
+  --color-accent-hover: #059669;
+  --color-accent-light: #34d399;
+  --color-accent-dark: #047857;
+}
+
+/* --- LIGHT MODE --- */
+:root.light {
+  /* Page & Surfaces (Overriding variables for light theme) */
+  --color-page-bg: #ffffff;
+  --color-surface: #f3f4f6;
+  --color-border: #e5e7eb;
+  --color-muted: #8a9099;
+
+  /* Text */
+  --color-main-text: #050505;
+
+  /* Accent / Emerald Green Palette remains consistent or can be tweaked */
+  --color-accent: #10b981;
+  --color-accent-hover: #059669;
+  --color-accent-light: #34d399;
+  --color-accent-dark: #047857;
+}
