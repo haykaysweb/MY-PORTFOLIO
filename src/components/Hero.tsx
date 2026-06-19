@@ -19,12 +19,25 @@ export default function Hero() {
             className="lg:col-span-7"
           >
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-xs sm:text-sm font-medium tracking-widest uppercase mb-6 text-accent"
+              initial="hidden"
+              animate="visible"
+              className="text-xs sm:text-sm font-medium tracking-widest uppercase mb-6 text-accent flex flex-wrap"
             >
-              Hello, I'm Akeredolu Kolawole
+              {"Hello, I'm Akeredolu Kolawole"
+                .split("")
+                .map((letter, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: 0.2 + index * 0.03,
+                      duration: 0.3,
+                    }}
+                  >
+                    {letter === " " ? "\u00A0" : letter}
+                  </motion.span>
+                ))}
             </motion.p>
 
             <motion.h1
