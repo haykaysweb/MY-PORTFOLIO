@@ -1,23 +1,23 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef, type ReactNode } from 'react';
-import { Code, Server, Cloud, Database, Globe, Cpu } from 'lucide-react';
+import { motion, useInView } from "framer-motion";
+import { useRef, type ReactNode } from "react";
+import { Code, Server, Cloud, Database, Globe, Cpu, Wind } from "lucide-react";
 
 interface TechItem {
   name: string;
   icon: ReactNode;
-  size?: 'small' | 'medium' | 'large';
+  size?: "small" | "medium" | "large";
 }
 
 const techStack: TechItem[] = [
-  { name: 'React', icon: <Code size={28} />, size: 'large' },
-  { name: 'Node.js', icon: <Server size={28} />, size: 'medium' },
-  { name: 'TypeScript', icon: <Globe size={24} />, size: 'medium' },
-  { name: 'Javascript', icon: <Cloud size={28} />, size: 'large' },
-  // { name: 'PostgreSQL', icon: <Database size={24} />, size: 'small' },
-  { name: 'Express', icon: <Cpu size={24} />, size: 'small' },
+  { name: "React", icon: <Code size={28} />, size: "large" },
+  { name: "Node.js", icon: <Server size={28} />, size: "medium" },
+  { name: "TypeScript", icon: <Globe size={24} />, size: "medium" },
+  { name: "Javascript", icon: <Cloud size={28} />, size: "large" },
+  { name: "TailwindCSS", icon: <Wind size={24} />, size: "small" },
+  { name: "Express", icon: <Cpu size={24} />, size: "small" },
   // { name: 'Next.js', icon: <Globe size={28} />, size: 'medium' },
-  // { name: 'Python', icon: <Server size={24} />, size: 'small' },
-  { name: 'MongoDB', icon: <Database size={28} />, size: 'medium' },
+
+  { name: "MongoDB", icon: <Database size={28} />, size: "medium" },
 ];
 
 const container = {
@@ -37,27 +37,27 @@ const item = {
 
 export default function TechStack() {
   const ref = useRef<HTMLElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const getSizeClasses = (size?: string) => {
     switch (size) {
-      case 'large':
-        return 'md:col-span-2 md:row-span-2';
-      case 'medium':
-        return 'md:col-span-1 md:row-span-2';
+      case "large":
+        return "md:col-span-2 md:row-span-2";
+      case "medium":
+        return "md:col-span-1 md:row-span-2";
       default:
-        return 'md:col-span-1 md:row-span-1';
+        return "md:col-span-1 md:row-span-1";
     }
   };
 
   const getContentSize = (size?: string) => {
     switch (size) {
-      case 'large':
-        return { icon: 48, title: 'text-2xl' };
-      case 'medium':
-        return { icon: 32, title: 'text-xl' };
+      case "large":
+        return { icon: 48, title: "text-2xl" };
+      case "medium":
+        return { icon: 32, title: "text-xl" };
       default:
-        return { icon: 24, title: 'text-lg' };
+        return { icon: 24, title: "text-lg" };
     }
   };
 
@@ -77,15 +77,13 @@ export default function TechStack() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-main-text">
             Tech Stack
           </h2>
-          <p className="text-lg text-muted">
-            Technologies I work with daily
-          </p>
+          <p className="text-lg text-muted">Technologies I work with daily</p>
         </motion.div>
 
         <motion.div
           variants={container}
           initial="hidden"
-          animate={isInView ? 'show' : 'hidden'}
+          animate={isInView ? "show" : "hidden"}
           className="grid grid-cols-2 md:grid-cols-4 auto-rows-[140px] md:auto-rows-[160px] gap-4"
         >
           {techStack.map((tech) => {
@@ -101,16 +99,16 @@ export default function TechStack() {
                 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{
-                  type: 'spring',
+                  type: "spring",
                   stiffness: 300,
                   damping: 20,
                 }}
                 className={`${getSizeClasses(
-                  tech.size
+                  tech.size,
                 )} group relative overflow-hidden rounded-2xl p-6 cursor-pointer bg-page-bg border border-border hover:border-accent/50 transition-colors duration-300`}
                 style={{
-                  transformStyle: 'preserve-3d',
-                  perspective: '1000px',
+                  transformStyle: "preserve-3d",
+                  perspective: "1000px",
                 }}
               >
                 {/* Glow effect on hover */}

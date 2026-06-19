@@ -41,6 +41,19 @@ const projectsData: Project[] = [
       "https://res.cloudinary.com/dw5bai7mk/image/upload/v1781528825/Screenshot_2026-06-15_020446_cbyh2r.png",
     imagePosition: "left",
   },
+  {
+    id: "project-3",
+    number: "Project 03",
+    title: "Task Duty",
+    description:
+      "Task Duty is a highly efficient, feature-rich task management and productivity application designed to help individuals and teams organize their daily workflows. Built with a clean, intuitive user interface, it allows users to seamlessly create, track, manage, and prioritize tasks from inception to completion.",
+    techStack: ["MongoDB", "JavaScript", "Express", "React", "Node.js"],
+    liveLink: "https://task-duty-seven.vercel.app/",
+    caseStudyLink: "#",
+    image:
+      "https://res.cloudinary.com/dw5bai7mk/image/upload/v1781557869/Screenshot_2026-06-15_101059_dlymnj.png",
+    imagePosition: "left",
+  },
 ];
 
 export default function Projects() {
@@ -92,7 +105,7 @@ export default function Projects() {
                     <motion.img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-fill"
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.5, ease: "easeOut" }}
                     />
