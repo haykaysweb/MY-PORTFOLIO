@@ -9,6 +9,7 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { useEffect } from "react";
+import ScrollProgress from "./components/ScrollProgress";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ export default function App() {
       <>
         <div className="min-h-screen bg-dark-bg text-white transition-colors duration-300">
           <Navbar />
+          <ScrollProgress />
           <main>
             <Hero />
             <TechStack />

@@ -64,7 +64,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={ref}
-      className=" py-24 sm:py-32 bg-page-bg text-main-text transition-colors duration-300 font-sans "
+      className="py-24 sm:py-32 bg-page-bg text-main-text transition-colors duration-300 font-sans "
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
