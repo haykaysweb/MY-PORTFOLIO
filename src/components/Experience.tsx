@@ -52,7 +52,9 @@ export default function Experience() {
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-4">
             Experience
           </h2>
-          <p className="text-lg text-muted">My professional journey & projects</p>
+          <p className="text-lg text-muted">
+            My professional journey & projects
+          </p>
         </motion.div>
 
         {/* Content */}
@@ -90,7 +92,7 @@ export default function Experience() {
                       key={i}
                       className="flex items-start gap-3 text-base text-muted leading-relaxed"
                     >
-                      <span className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-accent" />
+                      <span className="mt-2 w-1.5 h-1.5 rounded-full shrink-0 bg-accent" />
                       <span>{item}</span>
                     </li>
                   ))}

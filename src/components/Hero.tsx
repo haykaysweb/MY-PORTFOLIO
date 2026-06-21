@@ -66,7 +66,7 @@ export default function Hero() {
 
             <div className="flex gap-6 mb-10 text-muted">
               <motion.a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/akeredolu-kolawole-7a18643b7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:text-accent"
