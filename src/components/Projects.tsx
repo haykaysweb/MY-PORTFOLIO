@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 interface Project {
   id: string;
@@ -9,7 +9,7 @@ interface Project {
   description: string;
   techStack: string[];
   liveLink: string;
-  caseStudyLink: string;
+
   image: string;
   imagePosition: "left" | "right";
 }
@@ -23,7 +23,7 @@ const projectsData: Project[] = [
       "Miles Car Rental is a highly scalable, full-stack vehicle reservation and fleet management platform engineered to deliver a frictionless booking experience. Designed with a premium, high-end SaaS aesthetic, the platform bridges the gap between sleek consumer-facing accessibility and robust administrative control. By prioritizing responsive design, secure data handling, and buttery-smooth user interactions, the application redefines the digital car rental experience.",
     techStack: ["React", "Node.js", "MongoDB", "Express", "TypeScript"],
     liveLink: "https://milescar-rental.vercel.app/",
-    caseStudyLink: "#",
+
     image:
       "https://res.cloudinary.com/dw5bai7mk/image/upload/v1781555198/Screenshot_2026-06-15_092434_isayxe.png",
     imagePosition: "right",
@@ -36,7 +36,7 @@ const projectsData: Project[] = [
       "The Laundry Wash Platform is a modern, full-stack on-demand laundry and dry-cleaning service application engineered to simplify the chore of garment care. Designed with a clean, premium aesthetic, the platform connects everyday users directly to laundry service providers, offering a frictionless ordering, tracking, and fulfillment workflow. By prioritizing real-time status updates, secure transactions, and a highly responsive mobile-first interface, the application modernizes the traditional laundry experience.",
     techStack: ["MongoDB", "JavaScript", "Express", "React", "Node.js"],
     liveLink: "https://laundry-wash-client-two.vercel.app/",
-    caseStudyLink: "#",
+
     image:
       "https://res.cloudinary.com/dw5bai7mk/image/upload/v1781528825/Screenshot_2026-06-15_020446_cbyh2r.png",
     imagePosition: "left",
@@ -49,7 +49,7 @@ const projectsData: Project[] = [
       "Task Duty is a highly efficient, feature-rich task management and productivity application designed to help individuals and teams organize their daily workflows. Built with a clean, intuitive user interface, it allows users to seamlessly create, track, manage, and prioritize tasks from inception to completion.",
     techStack: ["MongoDB", "JavaScript", "Express", "React", "Node.js"],
     liveLink: "https://task-duty-seven.vercel.app/",
-    caseStudyLink: "#",
+
     image:
       "https://res.cloudinary.com/dw5bai7mk/image/upload/v1781557869/Screenshot_2026-06-15_101059_dlymnj.png",
     imagePosition: "left",
@@ -156,15 +156,6 @@ export default function Projects() {
                     >
                       <ExternalLink size={18} />
                       Live Demo
-                    </motion.a>
-
-                    <motion.a
-                      href={project.caseStudyLink}
-                      className="inline-flex items-center justify-center gap-2 text-main-text font-medium hover:text-accent transition-colors"
-                      whileHover={{ x: 5 }}
-                    >
-                      View Case Study
-                      <ArrowRight size={16} />
                     </motion.a>
                   </div>
                 </div>
