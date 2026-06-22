@@ -150,8 +150,8 @@ export default function Navbar() {
                 {/* Mobile Download CV Button */}
                 <div className="pt-2 px-2">
                   <motion.a
-                    href="/resume.pdf"
-                    download="Resume_Akeredolu_Kolawole.pdf"
+                    href="/Akeredolu Kolawole CV.pdf"
+                    download="Akeredolu_Kolawole_CV.pdf"
                     className="flex items-center justify-center w-full bg-accent hover:bg-accent-hover text-white px-5 py-3 rounded-xl font-semibold transition-all duration-300 cursor-none text-base shadow-lg shadow-accent/20"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -167,4 +167,3 @@ export default function Navbar() {
     </motion.nav>
   );
 }
-
