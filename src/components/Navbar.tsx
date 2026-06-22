@@ -91,8 +91,8 @@ export default function Navbar() {
           <div className="flex items-center gap-4 relative z-40">
             {/* Download CV Button */}
             <motion.a
-              href="/resume.pdf"
-              download="Resume_AK.pdf"
+              href="/Akeredolu_Kolawole_CV.pdf"
+              download="Akeredolu_Kolawole_CV.pdf"
               className=" sm:inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-white px-5 py-2.5 rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-accent/20 cursor-none text-sm"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -147,18 +147,7 @@ export default function Navbar() {
                   </motion.a>
                 ))}
 
-                {/* Mobile Download CV Button */}
-                <div className="pt-2 px-2">
-                  <motion.a
-                    href="/Akeredolu Kolawole CV.pdf"
-                    download="Akeredolu_Kolawole_CV.pdf"
-                    className="flex items-center justify-center w-full bg-accent hover:bg-accent-hover text-white px-5 py-3 rounded-xl font-semibold transition-all duration-300 cursor-none text-base shadow-lg shadow-accent/20"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    Download CV
-                  </motion.a>
-                </div>
+      
               </div>
             </motion.div>
           )}
