@@ -10,6 +10,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { useEffect } from "react";
 import ScrollProgress from "./components/ScrollProgress";
+import MouseEffect from "./components/MouseEffect";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <>
         <div className="min-h-screen bg-dark-bg text-white transition-colors duration-300">
+          <MouseEffect/>
           <Navbar />
           <ScrollProgress />
           <main>
