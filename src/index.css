@@ -45,7 +45,7 @@ body {
   /* Text */
   --color-main-text: #050505;
 
-  /* Accent / Emerald Green Palette remains consistent or can be tweaked */
+  /* Accent / Emerald Green Paletted */
   --color-accent: #10b981;
   --color-accent-hover: #059669;
   --color-accent-light: #34d399;
@@ -54,19 +54,19 @@ body {
 
 /* CUSTOM SCROLLBAR STYLES */
 ::-webkit-scrollbar {
-  width: 8px; /* Width of vertical scrollbar */
-  height: 8px; /* Height of horizontal scrollbar */
+  width: 8px; 
+  height: 8px; 
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-page-bg); /* Dynamically adapts to dark/light mode background */
+  background: var(--color-page-bg); 
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-accent); /* Uses your emerald green accent color */
+  background: var(--color-accent); 
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent-hover); /* Uses your hover accent color */
+  background: var(--color-accent-hover); 
 }

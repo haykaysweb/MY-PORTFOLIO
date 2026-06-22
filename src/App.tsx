@@ -14,6 +14,13 @@ import MouseEffect from "./components/MouseEffect";
 
 const queryClient = new QueryClient();
 
+const isDeviceDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (!isDeviceDark) {
+  document.documentElement.classList.add("light");
+} else {
+  document.documentElement.classList.remove("light");
+}
+
 export default function App() {
   useEffect(() => {
     if (window.location.hash) {
@@ -24,12 +31,26 @@ export default function App() {
       );
     }
     window.scrollTo({ top: 0, behavior: "smooth" });
+
+    //users device default dark/light theme controller
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleThemeChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        document.documentElement.classList.remove("light");
+      } else {
+        document.documentElement.classList.add("light");
+      }
+    };
+    mediaQuery.addEventListener("change", handleThemeChange);
+    return () => mediaQuery.removeEventListener("change", handleThemeChange);
   }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <>
-        <div className="min-h-screen bg-dark-bg text-white transition-colors duration-300">
-          <MouseEffect/>
+        <div className="min-h-screen bg-page-bg text-main-text transition-colors duration-300">
+          <MouseEffect />
           <Navbar />
           <ScrollProgress />
           <main>
