@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink } from "lucide-react";
+import { GiThumbDown } from "react-icons/gi";
 
 interface Project {
   id: string;
@@ -9,7 +10,7 @@ interface Project {
   description: string;
   techStack: string[];
   liveLink: string;
-
+  githubLink: string;
   image: string;
   imagePosition: "left" | "right";
 }
@@ -23,7 +24,7 @@ const projectsData: Project[] = [
       "Miles Car Rental is a highly scalable, full-stack vehicle reservation and fleet management platform engineered to deliver a frictionless booking experience. Designed with a premium, high-end SaaS aesthetic, the platform bridges the gap between sleek consumer-facing accessibility and robust administrative control. By prioritizing responsive design, secure data handling, and buttery-smooth user interactions, the application redefines the digital car rental experience.",
     techStack: ["React", "Node.js", "MongoDB", "Express", "TypeScript"],
     liveLink: "https://milescar-rental.vercel.app/",
-
+    githubLink: "https://github.com/Chrischuka13/miles-car-rental-frontend",
     image:
       "https://res.cloudinary.com/dw5bai7mk/image/upload/v1781555198/Screenshot_2026-06-15_092434_isayxe.png",
     imagePosition: "right",
@@ -36,7 +37,7 @@ const projectsData: Project[] = [
       "The Laundry Wash Platform is a modern, full-stack on-demand laundry and dry-cleaning service application engineered to simplify the chore of garment care. Designed with a clean, premium aesthetic, the platform connects everyday users directly to laundry service providers, offering a frictionless ordering, tracking, and fulfillment workflow. By prioritizing real-time status updates, secure transactions, and a highly responsive mobile-first interface, the application modernizes the traditional laundry experience.",
     techStack: ["MongoDB", "JavaScript", "Express", "React", "Node.js"],
     liveLink: "https://laundry-wash-client-two.vercel.app/",
-
+    githubLink: "https://github.com/haykaysweb/LAUNDRY-WASH",
     image:
       "https://res.cloudinary.com/dw5bai7mk/image/upload/v1781528825/Screenshot_2026-06-15_020446_cbyh2r.png",
     imagePosition: "left",
@@ -49,7 +50,7 @@ const projectsData: Project[] = [
       "Task Duty is a highly efficient, feature-rich task management and productivity application designed to help individuals and teams organize their daily workflows. Built with a clean, intuitive user interface, it allows users to seamlessly create, track, manage, and prioritize tasks from inception to completion.",
     techStack: ["MongoDB", "JavaScript", "Express", "React", "Node.js"],
     liveLink: "https://task-duty-seven.vercel.app/",
-
+    githubLink: "https://github.com/haykaysweb/TASK-DUTY",
     image:
       "https://res.cloudinary.com/dw5bai7mk/image/upload/v1781557869/Screenshot_2026-06-15_101059_dlymnj.png",
     imagePosition: "left",
@@ -62,7 +63,7 @@ const projectsData: Project[] = [
       "(In Progress): A full-stack web platform engineered to optimize agricultural logistics and supply chain resource management in Southwest Nigeria.",
     techStack: ["MongoDB", "TypeScript", "Express", "React", "Node.js"],
     liveLink: "",
-
+    githubLink: "",
     image:
       "https://res.cloudinary.com/dw5bai7mk/image/upload/v1786973444/Screenshot_2026-08-17_063004_ibrjqv.jpg",
     imagePosition: "left",
@@ -169,6 +170,17 @@ export default function Projects() {
                     >
                       <ExternalLink size={18} />
                       Live Demo
+                    </motion.a>
+                    <motion.a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-accent/10 text-foreground font-medium px-6 py-3.5 rounded-xl transition-all duration-300 border-2 border-accent/40 hover:border-accent"
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
+                    >
+                      <GiThumbDown size={18} />
+                      Source Code
                     </motion.a>
                   </div>
                 </div>
