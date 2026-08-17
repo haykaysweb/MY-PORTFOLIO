@@ -1,7 +1,9 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, type ReactNode } from "react";
-import { Code, Server, Cloud, Database, Globe, Cpu, Wind } from "lucide-react";
+import { Code, Server, Database, Globe, Cpu, Wind } from "lucide-react";
 import { FiFigma } from "react-icons/fi";
+import { TbVersions } from "react-icons/tb";
+import { BsJavascript } from "react-icons/bs";
 
 interface TechItem {
   name: string;
@@ -13,11 +15,12 @@ const techStack: TechItem[] = [
   { name: "React", icon: <Code size={28} />, size: "large" },
   { name: "Node.js", icon: <Server size={28} />, size: "medium" },
   { name: "TypeScript", icon: <Globe size={24} />, size: "medium" },
-  { name: "Javascript", icon: <Cloud size={28} />, size: "large" },
+  { name: "Javascript", icon: <BsJavascript size={28} />, size: "large" },
   { name: "TailwindCSS", icon: <Wind size={24} />, size: "small" },
   { name: "Express", icon: <Cpu size={24} />, size: "small" },
   { name: "Figma", icon: <FiFigma size={28} />, size: "medium" },
   { name: "MongoDB", icon: <Database size={28} />, size: "medium" },
+  { name: "Version Control", icon: <TbVersions size={28} />, size: "large" },
 ];
 
 const container = {

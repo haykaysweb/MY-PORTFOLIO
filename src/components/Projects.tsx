@@ -54,6 +54,19 @@ const projectsData: Project[] = [
       "https://res.cloudinary.com/dw5bai7mk/image/upload/v1781557869/Screenshot_2026-06-15_101059_dlymnj.png",
     imagePosition: "left",
   },
+  {
+    id: "project-4",
+    number: "Project 04",
+    title: "Agro Keep",
+    description:
+      "(In Progress): A full-stack web platform engineered to optimize agricultural logistics and supply chain resource management in Southwest Nigeria.",
+    techStack: ["MongoDB", "TypeScript", "Express", "React", "Node.js"],
+    liveLink: "",
+
+    image:
+      "https://res.cloudinary.com/dw5bai7mk/image/upload/v1786973444/Screenshot_2026-08-17_063004_ibrjqv.jpg",
+    imagePosition: "left",
+  },
 ];
 
 export default function Projects() {

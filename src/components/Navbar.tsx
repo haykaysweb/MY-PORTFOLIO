@@ -146,8 +146,6 @@ export default function Navbar() {
                     {link.name}
                   </motion.a>
                 ))}
-
-      
               </div>
             </motion.div>
           )}
